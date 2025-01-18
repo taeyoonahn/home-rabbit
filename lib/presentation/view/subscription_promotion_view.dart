@@ -266,47 +266,47 @@ class SubscriptionPromotionView extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(screenWidth*0.04,0,screenWidth*0.04,0),
-                    child: Container(
-                      padding: EdgeInsets.fromLTRB(screenWidth*0.04, screenWidth*0.03, screenWidth*0.08, screenWidth*0.03),
-                      decoration: BoxDecoration(
-                        color: HexColor('3351FF'),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            "광고 제거",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: 'SCDream',
-                              fontSize: screenWidth * 0.04,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          Text(
-                            "없음",
-                            style: TextStyle(
-                              color: Colors.grey,
-                              fontFamily: 'SCDream',
-                              fontSize: screenWidth * 0.04,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          Text(
-                            "무제한",
-                            style: TextStyle(
-                              color: Colors.amber,
-                              fontFamily: 'SCDream',
-                              fontSize: screenWidth * 0.04,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
+                  // Padding(
+                  //   padding: EdgeInsets.fromLTRB(screenWidth*0.04,0,screenWidth*0.04,0),
+                  //   child: Container(
+                  //     padding: EdgeInsets.fromLTRB(screenWidth*0.04, screenWidth*0.03, screenWidth*0.08, screenWidth*0.03),
+                  //     decoration: BoxDecoration(
+                  //       color: HexColor('3351FF'),
+                  //     ),
+                  //     child: Row(
+                  //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  //       children: [
+                  //         Text(
+                  //           "광고 제거",
+                  //           style: TextStyle(
+                  //             color: Colors.white,
+                  //             fontFamily: 'SCDream',
+                  //             fontSize: screenWidth * 0.04,
+                  //             fontWeight: FontWeight.bold,
+                  //           ),
+                  //         ),
+                  //         Text(
+                  //           "없음",
+                  //           style: TextStyle(
+                  //             color: Colors.grey,
+                  //             fontFamily: 'SCDream',
+                  //             fontSize: screenWidth * 0.04,
+                  //             fontWeight: FontWeight.bold,
+                  //           ),
+                  //         ),
+                  //         Text(
+                  //           "무제한",
+                  //           style: TextStyle(
+                  //             color: Colors.amber,
+                  //             fontFamily: 'SCDream',
+                  //             fontSize: screenWidth * 0.04,
+                  //             fontWeight: FontWeight.bold,
+                  //           ),
+                  //         ),
+                  //       ],
+                  //     ),
+                  //   ),
+                  // ),
                   Padding(
                     padding: EdgeInsets.fromLTRB(screenWidth*0.04,0,screenWidth*0.04,0),
                     child: Container(
