@@ -262,7 +262,7 @@ class HouseViewModel extends ChangeNotifier {
     String riskManual = '';
     switch(_currentHouse!.rank){
       case 'A':
-        riskManual = '해당 매물은 안정성은 양호한 수준입니다';
+        riskManual = '해당 매물은 안정성은 양호한 수준입니다.\n물론 부동산 거래에서 100%는 없습니다.';
         break;
       case 'B':
         riskManual = '해당 매물의 안전성은 평범한 수준입니다';
@@ -304,6 +304,11 @@ class HouseViewModel extends ChangeNotifier {
         context.go('/home/firstInput/secondInput/thirdInput/discriminationResult/discriminationResultDetail');
         break;
     }
+  }
+
+  Future<int> getTotalHouses() async {
+    fetchHouse();
+    return _myHouses.length;
   }
 
   Future<void> deleteAllHouse() async {

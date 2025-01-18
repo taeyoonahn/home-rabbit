@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:home_rabbit/presentation/view_model/subcription_view_model.dart';
 import 'package:home_rabbit/presentation/widget/bottom_sheet/item_bottom_sheet.dart';
 import 'package:home_rabbit/presentation/widget/item/house_rank_item.dart';
 import 'package:provider/provider.dart';
@@ -12,6 +14,7 @@ class HouseItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final houseViewModel = context.read<HouseViewModel>();
+    final subscriptionViewModel = context.read<SubscriptionViewModel>();
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
 
@@ -29,7 +32,11 @@ class HouseItem extends StatelessWidget {
         child: ListTile(
           onTap: () async {
             await houseViewModel.setCurrentHouse(house);
-            houseViewModel.discriminatingNavigate(context);
+            if(context.mounted) {
+              houseViewModel.discriminatingNavigate(context);
+            } else {
+              throw Error();
+            }
           },
           leading: HouseRankItem(houseRank: house.rank),
           title: Text(
@@ -47,17 +54,21 @@ class HouseItem extends StatelessWidget {
             children: [
               GestureDetector(
                 onTap: () {
-                  showModalBottomSheet(
-                    useRootNavigator: true,
-                    backgroundColor: Colors.white,
-                    context: context,
-                    shape: const RoundedRectangleBorder(
-                      borderRadius: BorderRadius.vertical(top: Radius.circular(25.0)),
-                    ),
-                    builder: (BuildContext context) {
-                      return ItemBottomSheet(house: house);
-                    },
-                  );
+                  if (subscriptionViewModel.isSubscribed) {
+                    showModalBottomSheet(
+                      useRootNavigator: true,
+                      backgroundColor: Colors.white,
+                      context: context,
+                      shape: const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.vertical(top: Radius.circular(25.0)),
+                      ),
+                      builder: (BuildContext context) {
+                        return ItemBottomSheet(house: house);
+                      },
+                    );
+                  } else {
+                    context.go("/home/subscriptionPromotion");
+                  }
                 },
                 child: Icon(
                   Icons.more_vert_outlined,

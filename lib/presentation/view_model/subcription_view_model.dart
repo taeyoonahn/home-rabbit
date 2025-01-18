@@ -8,7 +8,6 @@ import 'package:purchases_flutter/purchases_flutter.dart';
 
 class SubscriptionViewModel extends ChangeNotifier {
   bool entitlementIsActive = false;
-  String appUserID = '';
   late LogInResult currentRevenueCatLogin;
   late CustomerInfo customerInfo;
   bool isSubscribed = false;
@@ -36,19 +35,6 @@ class SubscriptionViewModel extends ChangeNotifier {
     }
   }
 
-  Future<void> loginRevenueCat(String serviceUid) async {
-    _loadingViewModel.loading();
-    try {
-      LogInResult revenueCatLogin = await Purchases.logIn(serviceUid);
-      currentRevenueCatLogin = revenueCatLogin;
-      notifyListeners();
-    } catch (e) {
-      rethrow;
-    } finally {
-      _loadingViewModel.notLoading();
-    }
-  }
-
   Future<void> restoreRevenueCat(BuildContext context, double screenWidth) async {
     _loadingViewModel.loading();
     try {
@@ -56,8 +42,8 @@ class SubscriptionViewModel extends ChangeNotifier {
       CustomerInfo customerInfoForRestore = await Purchases.getCustomerInfo();
       bool hasActiveEntitlements = customerInfoForRestore.entitlements.active
           .isNotEmpty;
-
       if (hasActiveEntitlements) {
+        isSubscribed = true;
         showDialog(
           context: context,
           barrierDismissible: false,

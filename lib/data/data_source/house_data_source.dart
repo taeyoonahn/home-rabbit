@@ -10,7 +10,7 @@ class HouseDataSource {
   static final HouseDataSource houseDataSource = HouseDataSource._();
   static final LoadingViewModel _loadingViewModel = LoadingViewModel();
 
-  static Future<void> init(String uid) async {
+  static Future<void> init(String userName) async {
     if (_isar != null && _isar!.isOpen) {
       return;
     }
@@ -18,7 +18,7 @@ class HouseDataSource {
     _isar = await Isar.open(
       [HouseSchema],
       directory: dir.path,
-      name: uid,
+      name: userName,
     );
   }
 
@@ -49,7 +49,7 @@ class HouseDataSource {
     _loadingViewModel.loading();
     try {
       if (_isar == null) {
-        throw Exception("Isar instance is not initialized. Call init() first.");
+        throw Exception();
       }
       final result = await _isar!.houses
           .filter()

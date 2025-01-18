@@ -20,7 +20,7 @@ class ErrorView extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.asset('assets/images/error.png',),
+                Image.asset('assets/icons/error.png',),
                 Text(
                   '현재 서비스 상태 이상으로 인해',
                   style: TextStyle(

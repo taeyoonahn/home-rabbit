@@ -80,6 +80,7 @@ class Paywall extends StatelessWidget {
                               await subscriptionViewModel.fetchRevenueCat();
                               if (context.mounted) {
                                 context.pop();
+                                context.go('/home');
                               }
                             } catch (e) {
                               rethrow;
@@ -125,7 +126,305 @@ class Paywall extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: screenHeight*0.01, left: screenWidth * 0.03, right: screenWidth * 0.03,),
+              padding: EdgeInsets.fromLTRB(screenWidth*0.04,screenWidth*0.03,screenWidth*0.04,0),
+              child: Container(
+                padding: EdgeInsets.fromLTRB(screenWidth*0.015, screenWidth*0.025, screenWidth*0.015, screenWidth*0.025),
+                decoration: BoxDecoration(
+                  color: HexColor('1E319D'),
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(12.0),
+                    topRight: Radius.circular(12.0),
+                  ),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Text(
+                      "기능",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'SCDream',
+                        fontSize: screenWidth * 0.04,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(width: screenWidth*0.01,),
+                    Container(
+                      padding: EdgeInsets.all(screenWidth*0.015),
+                      decoration: BoxDecoration(
+                        color: Colors.grey,
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Text(
+                        "  Free  ",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontFamily: 'SCDream',
+                          fontSize: screenWidth * 0.04,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(screenWidth*0.015),
+                      decoration: BoxDecoration(
+                        gradient: const LinearGradient(
+                          colors: [Colors.purple, Colors.blue],
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                        ),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Text(
+                        "Premium",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontFamily: 'SCDream',
+                          fontSize: screenWidth * 0.04,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(screenWidth*0.04,0,screenWidth*0.04,0),
+              child: Container(
+                padding: EdgeInsets.fromLTRB(screenWidth*0.04, screenWidth*0.03, screenWidth*0.08, screenWidth*0.03),
+                decoration: BoxDecoration(
+                  color: HexColor('3351FF'),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "매물 저장",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'SCDream',
+                        fontSize: screenWidth * 0.04,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      "1회",
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontFamily: 'SCDream',
+                        fontSize: screenWidth * 0.04,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      "무제한",
+                      style: TextStyle(
+                        color: Colors.amber,
+                        fontFamily: 'SCDream',
+                        fontSize: screenWidth * 0.04,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(screenWidth*0.04,0,screenWidth*0.04,0),
+              child: Container(
+                padding: EdgeInsets.fromLTRB(screenWidth*0.04, screenWidth*0.03, screenWidth*0.08, screenWidth*0.03),
+                decoration: BoxDecoration(
+                  color: HexColor('3351FF'),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "매물 편집",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'SCDream',
+                        fontSize: screenWidth * 0.04,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      "없음",
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontFamily: 'SCDream',
+                        fontSize: screenWidth * 0.04,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      "무제한",
+                      style: TextStyle(
+                        color: Colors.amber,
+                        fontFamily: 'SCDream',
+                        fontSize: screenWidth * 0.04,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(screenWidth*0.04,0,screenWidth*0.04,0),
+              child: Container(
+                padding: EdgeInsets.fromLTRB(screenWidth*0.04, screenWidth*0.03, screenWidth*0.08, screenWidth*0.03),
+                decoration: BoxDecoration(
+                  color: HexColor('3351FF'),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "위험 분석",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'SCDream',
+                        fontSize: screenWidth * 0.04,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      "1회",
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontFamily: 'SCDream',
+                        fontSize: screenWidth * 0.04,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      "무제한",
+                      style: TextStyle(
+                        color: Colors.amber,
+                        fontFamily: 'SCDream',
+                        fontSize: screenWidth * 0.04,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(screenWidth*0.04,0,screenWidth*0.04,0),
+              child: Container(
+                padding: EdgeInsets.fromLTRB(screenWidth*0.04, screenWidth*0.03, screenWidth*0.04, screenWidth*0.03),
+                decoration: BoxDecoration(
+                  color: HexColor('3351FF'),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "안전 보고서",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'SCDream',
+                        fontSize: screenWidth * 0.04,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      "단순 평가",
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontFamily: 'SCDream',
+                        fontSize: screenWidth * 0.04,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      "무제한\n정밀 보고서",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.amber,
+                        fontFamily: 'SCDream',
+                        fontSize: screenWidth * 0.04,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(screenWidth*0.04,0,screenWidth*0.04,0),
+              child: Container(
+                padding: EdgeInsets.fromLTRB(screenWidth*0.04, screenWidth*0.03, screenWidth*0.08, screenWidth*0.03),
+                decoration: BoxDecoration(
+                  color: HexColor('3351FF'),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "광고 제거",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'SCDream',
+                        fontSize: screenWidth * 0.04,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      "없음",
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontFamily: 'SCDream',
+                        fontSize: screenWidth * 0.04,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      "무제한",
+                      style: TextStyle(
+                        color: Colors.amber,
+                        fontFamily: 'SCDream',
+                        fontSize: screenWidth * 0.04,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(screenWidth*0.04,0,screenWidth*0.04,0),
+              child: Container(
+                padding: EdgeInsets.fromLTRB(screenWidth*0.015, screenWidth*0.025, screenWidth*0.015, screenWidth*0.025),
+                decoration: BoxDecoration(
+                  color: HexColor('1E319D'),
+                  borderRadius: const BorderRadius.only(
+                    bottomLeft: Radius.circular(12.0),
+                    bottomRight: Radius.circular(12.0),
+                  ),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "전세 사기 위험 분석을 무제한으로\n광고 없이 편하게",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.amber,
+                        fontFamily: 'SCDream',
+                        fontSize: screenWidth * 0.04,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: screenHeight*0.02, left: screenWidth * 0.03, right: screenWidth * 0.03,),
               child: MainButton(
                 buttonText: '구매 복원하기',
                 buttonWidth: double.infinity,
