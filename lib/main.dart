@@ -68,6 +68,14 @@ class MyApp extends StatelessWidget {
       title: 'HomeRabbit',
       theme: ThemeData(fontFamily: 'Pretendard',),
       routerConfig: goRouter,
+      builder: (context, child) {
+        return GestureDetector(
+          onTap: () {
+            FocusScope.of(context).unfocus();
+          },
+          child: child,
+        );
+      },
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:home_rabbit/presentation/view_model/house_view_model.dart';
 import 'package:home_rabbit/presentation/view_model/subcription_view_model.dart';
@@ -24,8 +25,7 @@ class AddFloatingButton extends StatelessWidget {
         if (!subscriptionViewModel.isSubscribed &&
             await houseViewModel.getTotalHouses() != 0) {
           if (context.mounted) {
-            throw Error();
-            //context.go("/home/subscriptionPromotion");
+            context.go("/home/subscriptionPromotion");
           } else {
             throw Error();
           }
@@ -110,8 +110,6 @@ class AddFloatingButton extends StatelessWidget {
                           buttonHeight: screenHeight * 0.06,
                           myFontSize: screenWidth * 0.05,
                           myCallback: () async {
-                            print(subscriptionViewModel.isSubscribed);
-                            print(await houseViewModel.getTotalHouses());
                             if (subscriptionViewModel.isSubscribed) {
                               houseName = controller.text;
                               controller.text = "";

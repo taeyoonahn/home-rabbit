@@ -426,7 +426,7 @@ class Paywall extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(top: screenHeight*0.02, left: screenWidth * 0.03, right: screenWidth * 0.03,),
               child: MainButton(
-                buttonText: '구매 복원하기',
+                buttonText: '이전 구매 복원',
                 buttonWidth: double.infinity,
                 buttonHeight: screenHeight * 0.06,
                 myFontSize: screenWidth * 0.04,

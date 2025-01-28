@@ -99,7 +99,7 @@ class SecondInputView extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.fromLTRB(screenWidth * 0.06, 0, screenWidth * 0.06, 0),
                     child: Text(
-                      '6. 중개사가 공인중개사 자격증을 가지고 있지 않나요?',
+                      '6. 중개사가 공인중개사 자격증을 가지고 있는 것을 확인하셨나요?',
                       style: TextStyle(
                         fontFamily: 'SCDream',
                         fontSize: screenWidth * 0.05,
@@ -134,7 +134,7 @@ class SecondInputView extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.fromLTRB(screenWidth * 0.06, 0, screenWidth * 0.06, 0),
                     child: Text(
-                      '7. 해당 매물의 전세 보증 보험 가입이 불가능한가요?',
+                      '7. 해당 매물이 전세 보증 보험에 가입가능한가요?',
                       style: TextStyle(
                         fontFamily: 'SCDream',
                         fontSize: screenWidth * 0.05,

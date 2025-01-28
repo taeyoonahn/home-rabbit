@@ -197,12 +197,12 @@ class HouseViewModel extends ChangeNotifier {
 
   void assessRisk() {
     int riskPoint = 0;
-    if(_currentHouse!.isDoubleAgent!=0) {riskPoint+=1;}
-    if(_currentHouse!.isDuplicateContract!=0) {riskPoint+=1;}
+    if(_currentHouse!.isDoubleAgent!=1) {riskPoint+=1;}
+    if(_currentHouse!.isDuplicateContract!=1) {riskPoint+=1;}
     if(_currentHouse!.isFinancialRisk==1) {riskPoint+=3;}
     if(_currentHouse!.isIllegalBuilding!=0) {riskPoint+=1;}
-    if(_currentHouse!.isNoInsurance!=0) {riskPoint+=1;}
-    if(_currentHouse!.isAgentScam!=0) {riskPoint+=1;}
+    if(_currentHouse!.isNoInsurance!=1) {riskPoint+=1;}
+    if(_currentHouse!.isAgentScam!=1) {riskPoint+=1;}
     if(_currentHouse!.isTaxEvasion!=0) {riskPoint+=1;}
     if(_currentHouse!.isTrustCompany!=0) {riskPoint+=1;}
     if(riskPoint == 0) {

@@ -16,7 +16,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
-version: 1.0.0+1
+version: 1.1.0+1
 
 environment:
   sdk: ^3.5.3
@@ -120,44 +120,12 @@ flutter:
   fonts:
     - family: Pretended
       fonts:
-        - asset: assets/fonts/Pretendard/Pretendard-Thin.otf
-          weight: 100
-        - asset: assets/fonts/Pretendard/Pretendard-SemiBold.otf
-          weight: 200
         - asset: assets/fonts/Pretendard/Pretendard-Regular.otf
-          weight: 300
-        - asset: assets/fonts/Pretendard/Pretendard-Medium.otf
-          weight: 400
-        - asset: assets/fonts/Pretendard/Pretendard-Light.otf
-          weight: 500
-        - asset: assets/fonts/Pretendard/Pretendard-ExtraLight.otf
-          weight: 600
-        - asset: assets/fonts/Pretendard/Pretendard-ExtraBold.otf
-          weight: 700
         - asset: assets/fonts/Pretendard/Pretendard-Bold.otf
-          weight: 800
-        - asset: assets/fonts/Pretendard/Pretendard-Black.otf
-          weight: 900
 
     - family: SCDream
       fonts:
-        - asset: assets/fonts/SCDream/SCDream1.otf
-          weight: 100
-        - asset: assets/fonts/SCDream/SCDream2.otf
-          weight: 200
-        - asset: assets/fonts/SCDream/SCDream3.otf
-          weight: 300
         - asset: assets/fonts/SCDream/SCDream4.otf
-          weight: 400
-        - asset: assets/fonts/SCDream/SCDream5.otf
-          weight: 500
-        - asset: assets/fonts/SCDream/SCDream6.otf
-          weight: 600
         - asset: assets/fonts/SCDream/SCDream7.otf
-          weight: 700
-        - asset: assets/fonts/SCDream/SCDream8.otf
-          weight: 800
-        - asset: assets/fonts/SCDream/SCDream9.otf
-          weight: 900
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package

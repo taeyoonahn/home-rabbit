@@ -61,7 +61,7 @@ class FirstInputView extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.fromLTRB(screenWidth * 0.06, 0, screenWidth * 0.06, 0),
                     child: Text(
-                      '1. 계약서 상의 집주인과 대면해 신분증을 확인하지 못하셨나요?',
+                      '1. 계약 중 계약서 상의 집주인과 대면해 신분증을 확인하셨나요?',
                       style: TextStyle(
                         fontFamily: 'SCDream',
                         fontSize: screenWidth * 0.05,
@@ -98,7 +98,7 @@ class FirstInputView extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.fromLTRB(screenWidth * 0.06, 0, screenWidth * 0.06, 0),
                     child: Text(
-                      '2. 기존 세입자가 계약일 전에 이사를 완료하지 않았나요?',
+                      '2. 기존 세입자가 계약 시작 날짜 전에 이사를 완료했나요?',
                       style: TextStyle(
                         fontFamily: 'SCDream',
                         fontSize: screenWidth * 0.05,
@@ -191,7 +191,7 @@ class FirstInputView extends StatelessWidget {
                     child: DiscriminationInfoItem(
                       infoText: '이곳에서 관련 상세 안내를 확인하세요!',
                       myCallback: () {
-                        systemInfoViewModel.setCurrentQuestionInfoFactor('동일매물 중복계약');
+                        systemInfoViewModel.setCurrentQuestionInfoFactor('세금 체납');
                         context.go('/home/firstInput/systemQuestionInfo');
                       },
                     ),
